@@ -29,8 +29,10 @@ jobs:
     - name: Build with PyInstaller
       run: pyinstaller --onefile line_parser.py
 
+    # === 這裡是修正的地方 ===
+    # 將 v3 更新為 v4
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: line-parser-${{ matrix.os }}
         path: |
